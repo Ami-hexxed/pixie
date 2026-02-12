@@ -1,3 +1,72 @@
 body {
-    background: lightblue;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-size: calc(100vw / var(--bg-repeat-count)) auto;
+    background-repeat: repeat;
+    background-attachment: fixed;
+    background-position: 0 0;
+    margin: 0;
+    padding: 0;
+}
+
+body.main-page {
+    --bg-repeat-count: 12;
+    --footer-repeat-count: 13;
+    background-image: url('assets/main/background.png');
+}
+
+body.window-page {
+    --bg-repeat-count: 5;
+    --footer-repeat-count: 15;
+    background-image: url('assets/window/background.png');
+}
+
+body.other-page {
+    background-image: url('assets/OTHER/background.png');
+}
+
+.footer {
+    width: 100%;
+    height: calc(50vw / var(--footer-repeat-count));
+    background-size: calc(100vw / var(--footer-repeat-count)) auto;
+    background-repeat: repeat-x;
+    background-position: 0 0;
+    margin-top: auto;
+    flex-shrink: 0;
+}
+
+body.main-page .footer {
+    background-image: url('assets/main/footer.png');
+}
+
+body.window-page .footer {
+    background-image: url('assets/window/footer.png');
+}
+
+body.other-page .footer {
+    background-image: url('assets/OTHER/footer.png');
+}
+
+.top-layer {
+    margin-top: 40px;
+}
+
+.top-layer,
+.bottom-layer {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+    padding: 40px;
+    place-items: center;
+}
+
+.top-layer img,
+.bottom-layer img {
+    width: 220px;
+    height: auto;
+    object-fit: contain;    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
 }
