@@ -1,7 +1,5 @@
-// Play click sound on page load (for pages other than main.html)
 document.addEventListener('DOMContentLoaded', () => {
-    // Check if current page is not main.html
-    if (!window.location.href.includes('main.html') && window.location.pathname !== '/') {
+    if (!window.location.href.includes('index.html') && window.location.pathname !== '/') {
         const pageLoadAudio = new Audio('assets/sounds/click2.mp3');
         pageLoadAudio.currentTime = 0;      // Start time offset in seconds
         pageLoadAudio.volume = 0.6;         // Volume (0-1)
