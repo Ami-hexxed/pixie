@@ -11,15 +11,21 @@ body {
 }
 
 body.main-page {
-    --bg-repeat-count: 12;
-    --footer-repeat-count: 13;
+    --bg-repeat-count: 20;
+    --footer-repeat-count: 15;
     background-image: url('assets/main/background.png');
 }
 
 body.window-page {
-    --bg-repeat-count: 5;
+    --bg-repeat-count: 6;
     --footer-repeat-count: 15;
     background-image: url('assets/window/background.png');
+}
+
+body.livingroom-page {
+    --bg-repeat-count: 2;
+    --footer-repeat-count: 12;
+    background-image: url('assets/livingroom/background.png');
 }
 
 body.other-page {
@@ -44,26 +50,30 @@ body.window-page .footer {
     background-image: url('assets/window/footer.png');
 }
 
+body.livingroom-page .footer {
+    background-image: url('assets/livingroom/footer.png');
+}
+
 body.other-page .footer {
     background-image: url('assets/OTHER/footer.png');
 }
 
 .top-layer {
-    margin-top: 40px;
+    margin-top: 3vh;
 }
 
 .top-layer,
 .bottom-layer {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    gap: 20px;
-    padding: 40px;
+    gap: 1.5vh;
+    padding: 5vh;
     place-items: center;
 }
 
 .top-layer img,
 .bottom-layer img {
-    width: 220px;
+    width: 22vh;
     height: auto;
     object-fit: contain;    user-select: none;
     -webkit-user-select: none;
